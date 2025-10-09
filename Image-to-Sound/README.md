@@ -68,11 +68,6 @@ On Windows PowerShell:
 $env:HUGGING_FACE_TOKEN="your_token_here"
 ```
 
-# Tips & Troubleshooting
-- First run can be slow due to model downloads.
-- If you encounter GPU OOM, reduce audio duration or batch size.
-- Ensure your CUDA driver is compatible with your installed `torch` version.
-
 # Acknowledgements
 - VLM: Qwen2-VL
 - Audio generation: AudioLDM2
