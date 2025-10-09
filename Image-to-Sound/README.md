@@ -2,16 +2,14 @@
 
 Generate sound effects directly from images. This repository provides an end-to-end pipeline that detects sound sources in a scene image using a Vision-Language Model (VLM) and synthesizes corresponding audio with AudioLDM2.
 
-## Features
---------
+# Features
 - Extracts sound source descriptions from images via VLM (Qwen2-VL)
 - Converts VLM outputs to audio-friendly prompts
 - Generates realistic audio clips using AudioLDM2
 - Batch processing and single-image modes
 - Simple, script-first workflow with minimal setup
 
-## Repository Structure
---------------------
+# Repository Structure
 - main.py: Orchestrates the full pipeline
 - image_to_text.py: Runs the VLM to extract sound sources from images
 - vlm_qwen.py: Loads and runs the Qwen2-VL model
@@ -23,20 +21,12 @@ Generate sound effects directly from images. This repository provides an end-to-
 - sound_sources/: Saved VLM outputs (JSON)
 - result/: Generated audio files
 
-## Requirements
-------------
+# Requirements
 - Python 3.8+
 - NVIDIA GPU with CUDA (recommended)
 - At least 8GB RAM (16GB+ recommended)
 
-## Installation
-------------
-```bash
-pip install -r requirements.txt
-```
-
-## Quick Start
------------
+# Quick Start
 - Run the entire pipeline on defaults:
 ```bash
 python main.py
@@ -57,20 +47,18 @@ python main.py --skip_audio
 python main.py --skip_vlm
 ```
 
-## Batch Processing
-----------------
+# Batch Processing
 Process all images under `data/` and save extracted sources to `sound_sources/`:
 ```bash
 python image_to_text.py
 ```
 
-## Generate audio from prepared prompts:
+# Generate audio from prepared prompts:
 ```bash
 python audioldm2.py
 ```
 
-## Configuration
--------------
+# Configuration
 Some models may require an access token. If so, set your environment variable:
 ```bash
 export HUGGING_FACE_TOKEN=your_token_here
@@ -80,13 +68,11 @@ On Windows PowerShell:
 $env:HUGGING_FACE_TOKEN="your_token_here"
 ```
 
-## Tips & Troubleshooting
-----------------------
+# Tips & Troubleshooting
 - First run can be slow due to model downloads.
 - If you encounter GPU OOM, reduce audio duration or batch size.
 - Ensure your CUDA driver is compatible with your installed `torch` version.
 
-## Acknowledgements
-----------------
+# Acknowledgements
 - VLM: Qwen2-VL
 - Audio generation: AudioLDM2
