@@ -1,5 +1,4 @@
-## Scene-to-Sound Generation Pipeline
-====================================
+# Scene-to-Sound Generation Pipeline
 
 Generate sound effects directly from images. This repository provides an end-to-end pipeline that detects sound sources in a scene image using a Vision-Language Model (VLM) and synthesizes corresponding audio with AudioLDM2.
 
