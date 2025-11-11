@@ -8,9 +8,9 @@ Phase 1: image-to-sound은 이미지로부터 sound_source를 생성합니다.
 Phase 2: sound-to-music은 생성된 sound_source를 튜닝하여 음악으로 발전시킵니다. 
 ![Image](https://github.com/user-attachments/assets/96b6e40b-bab0-4838-981e-9cf323d4caf7)
 
-![Image](https://github.com/user-attachments/assets/254c5578-5363-42a3-a687-d3ef8bd383c1)
 ![Image](https://github.com/user-attachments/assets/11477c4d-bd11-4c9e-80d4-8ddb27bf5330)
 ![Image](https://github.com/user-attachments/assets/842640bd-5f15-4c42-b604-a783b246a2af)
+![Image](https://github.com/user-attachments/assets/254c5578-5363-42a3-a687-d3ef8bd383c1)
 
 ![Image](https://github.com/user-attachments/assets/cebac3db-d377-4c39-9e35-5780c7a921a4)
 ![Image](https://github.com/user-attachments/assets/ff7baf4f-6ccc-4025-88e9-08b7f659bd9b)
