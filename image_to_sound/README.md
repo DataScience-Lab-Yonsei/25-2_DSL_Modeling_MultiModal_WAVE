@@ -1,1 +1,108 @@
+Image-to-Sound Generation Pipeline
+====================================
 
+Generate sound effects directly from images. This repository provides an end-to-end pipeline that detects sound sources in a scene image using a Vision-Language Model (VLM) and synthesizes corresponding audio with AudioLDM2.
+
+Features
+--------
+- Extracts sound source descriptions from images via VLM (Qwen2-VL)
+- Converts VLM outputs to audio-friendly prompts
+- Generates realistic audio clips using AudioLDM2
+- Batch processing and single-image modes
+- Simple, script-first workflow with minimal setup
+
+Repository Structure
+--------------------
+- main.py: Orchestrates the full pipeline
+- image_to_text.py: Runs the VLM to extract sound sources from images
+- vlm_qwen.py: Loads and runs the Qwen2-VL model
+- audio_prompt.py: Converts VLM outputs into prompts suitable for AudioLDM2
+- audioldm2.py: Audio generation with AudioLDM2
+- vlm_prompt/extract_sources.py: Prompt templates and example data loader
+- data/: Input images
+- vlm_prompt/: VLM prompt assets and examples
+- sound_sources/: Saved VLM outputs (JSON)
+- result/: Generated audio files
+
+Requirements
+------------
+- Python 3.8+
+- NVIDIA GPU with CUDA (recommended)
+- At least 8GB RAM (16GB+ recommended)
+
+Installation
+------------
+```bash
+pip install -r requirements.txt
+```
+
+Quick Start
+-----------
+- Run the entire pipeline on defaults:
+```bash
+python main.py
+```
+
+- Process a single image:
+```bash
+python main.py --single data/101.jpg
+```
+
+- Run only the VLM stage (no audio generation):
+```bash
+python main.py --skip_audio
+```
+
+- Run only the audio generation stage (skip VLM):
+```bash
+python main.py --skip_vlm
+```
+
+Batch Processing
+----------------
+Process all images under `data/` and save extracted sources to `sound_sources/`:
+```bash
+python image_to_text.py
+```
+
+Generate audio from prepared prompts:
+```bash
+python audioldm2.py
+```
+
+Configuration
+-------------
+Some models may require an access token. If so, set your environment variable:
+```bash
+export HUGGING_FACE_TOKEN=your_token_here
+```
+On Windows PowerShell:
+```powershell
+$env:HUGGING_FACE_TOKEN="your_token_here"
+```
+
+.gitignore for GitHub
+---------------------
+If you plan to upload this project to GitHub while excluding bulky or generated artifacts, create a `.gitignore` with:
+```gitignore
+data/
+__pycache__/
+result/
+[25-2] modeling project_멀모_최종.pdf
+[25-2] modeling project_멀모_최종.pptx
+```
+
+Tips & Troubleshooting
+----------------------
+- First run can be slow due to model downloads.
+- If you encounter GPU OOM, reduce audio duration or batch size.
+- Ensure your CUDA driver is compatible with your installed `torch` version.
+
+Acknowledgements
+----------------
+- VLM: Qwen2-VL
+- Audio generation: AudioLDM2
+
+License
+-------
+This is a research project. Please check and comply with the licenses of the respective upstream models and libraries (Transformers, Diffusers, Qwen-VL, AudioLDM2, etc.).
