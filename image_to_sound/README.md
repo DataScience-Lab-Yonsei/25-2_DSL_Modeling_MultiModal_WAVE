@@ -81,17 +81,6 @@ On Windows PowerShell:
 $env:HUGGING_FACE_TOKEN="your_token_here"
 ```
 
-.gitignore for GitHub
----------------------
-If you plan to upload this project to GitHub while excluding bulky or generated artifacts, create a `.gitignore` with:
-```gitignore
-data/
-__pycache__/
-result/
-[25-2] modeling project_멀모_최종.pdf
-[25-2] modeling project_멀모_최종.pptx
-```
-
 Tips & Troubleshooting
 ----------------------
 - First run can be slow due to model downloads.
