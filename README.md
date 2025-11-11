@@ -1,5 +1,5 @@
 # 25-2_DSL_Modeling_MultiModal_WAVE
-멀티모달 팀은 사용자가 이미지를 입력하면 이미지 속 객체들을 악기처럼 활용해 이미지의 상황과 무드에 맞게 기존 음악을 재구성하는 image-to-audio multimodal transformation을 구현하였습니다.
+멀티모달 팀은 사용자가 이미지를 입력하면 이미지 속 객체들을 악기처럼 활용해 이미지의 상황과 무드에 맞게 기존 음악을 재구성하는 image-to-audio multimodal transformation WAVE를 구축하였습니다.
 
 -----------
 ## Pipeline
