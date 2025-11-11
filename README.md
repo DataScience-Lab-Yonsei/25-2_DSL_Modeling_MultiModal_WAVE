@@ -1,5 +1,8 @@
 # 25-2_DSL_Modeling_MultiModal_WAVE
 멀티모달 팀은 사용자가 이미지를 입력하면 이미지 속 객체들을 악기처럼 활용해 이미지의 상황과 무드에 맞게 기존 음악을 재구성하는 image-to-audio multimodal transformation을 구현하였습니다.
+
+-----------
+## Pipeline
 파이프라인은 크게 2단계로 구성됩니다. 
 Phase 1: image-to-audio은 이미지로부터 sound_source를 생성합니다.
 Phase 2: audio-to-music은 생성된 sound_source를 튜닝하여 음악으로 발전시킵니다. 
