@@ -1,4 +1,4 @@
-# wave-pipeline
+# Sound-to-Music Pipeline
 
 MIDI와 단일 샘플(SFZ)을 이용해 밴드 4트랙(기타/베이스/키보드/드럼)을 합성하고, 가벼운 마스터 체인(HPF → 노이즈 게이트 → 소량 리버브 → 리미터)을 거쳐 **최종 1개의 WAV**를 만드는 파이프라인입니다.  
 기준 경로는 `/root/wave`이며, 산출물은 기본적으로 **`/root/wave/result/{MIDI이름}_result.wav`** 입니다.
