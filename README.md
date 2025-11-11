@@ -12,6 +12,11 @@ Phase 2: sound-to-music은 생성된 sound_source를 튜닝하여 음악으로 �
 ![Image](https://github.com/user-attachments/assets/842640bd-5f15-4c42-b604-a783b246a2af)
 ![Image](https://github.com/user-attachments/assets/254c5578-5363-42a3-a687-d3ef8bd383c1)
 
+-----------
+## Phase 1: Image-to-Sound
+phase1에서 가장 중요한 목표는 이미지에 어울리는 효과음을 생성하는 것입니다.
+이에 따라 먼저 text-to-audio 단계에서 어떤 사운드 생성 모델에 대해서 입력 형식을 어떻게 넣어줬을 때 효과음이 잘 생성되는지를 구체적으로 알아보고 이를 기준으로 삼은 뒤에 image-to-text를 구체화 하는 방식으로 진행했습니다. 
+<img width="1629" height="113" alt="image" src="https://github.com/user-attachments/assets/06a39b35-9fc9-430b-a5eb-1a4fbf4a2e1f" />
 ![Image](https://github.com/user-attachments/assets/cebac3db-d377-4c39-9e35-5780c7a921a4)
 ![Image](https://github.com/user-attachments/assets/ff7baf4f-6ccc-4025-88e9-08b7f659bd9b)
 
