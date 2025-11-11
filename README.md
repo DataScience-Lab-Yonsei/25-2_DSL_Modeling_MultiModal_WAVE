@@ -16,14 +16,14 @@ Phase 2: sound-to-music은 생성된 sound_source를 튜닝하여 음악으로 �
 ## Phase 1: Image-to-Sound
 phase1에서 가장 중요한 목표는 이미지에 어울리는 효과음을 생성하는 것입니다.
 이에 따라 먼저 text-to-audio 단계에서 어떤 사운드 생성 모델에 대해서 입력 형식을 어떻게 넣어줬을 때 효과음이 잘 생성되는지를 구체적으로 알아보고 이를 기준으로 삼은 뒤에 image-to-text를 구체화 하는 방식으로 진행했습니다. 
-### Text-to-Audio
+### 1-2. Text-to-Audio
 task 목적에 따라 퀄리티 높은 사운드를 생성하는 모델을 실험을 통해 선정하였습니다. 최종 선정 모델은 AudioLDM2입니다.
 ![Image](https://github.com/user-attachments/assets/cebac3db-d377-4c39-9e35-5780c7a921a4)
 ![Image](https://github.com/user-attachments/assets/ff7baf4f-6ccc-4025-88e9-08b7f659bd9b)
 
 ![Image](https://github.com/user-attachments/assets/95496d2b-f0d4-466a-89eb-b233a3836258)
 ![Image](https://github.com/user-attachments/assets/aa28f653-0291-49d9-9060-d6b3de0e6f41)
-### Image-to-Text
+### 1-1. Image-to-Text
 본 단계에서는 AudioLDM2가 task 목적에 더 적합한 사운드를 생성하도록 image로부터 text로 구성된 source를 뽑아내는 VLM을 찾고 VLM의 프롬프트를 구체화하였습니다. 
 ![Image](https://github.com/user-attachments/assets/16f69069-0f55-442f-9abd-e9e0824e0792)
 ![Image](https://github.com/user-attachments/assets/8aba7fc9-0458-441e-8f4c-453d9d4d6602)
