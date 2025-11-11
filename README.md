@@ -33,6 +33,7 @@ task 목적에 따라 퀄리티 높은 사운드를 생성하는 모델을 실�
 ![Image](https://github.com/user-attachments/assets/fe50c5f0-2236-4161-87d4-72b209421e07)
 
 ![Image](https://github.com/user-attachments/assets/87fe233c-1e5a-4a7a-8f82-954ab170cbfc)
+
 ----------------
 ## Phase 2: Sound-to-Music
 Phase 1에서 생성한 사운드 소스들을 각각 drum, guitar, bass, keyboard 중 하나로 수동 매핑하고 세션별로 soundfont를 추출한 후 악보의 음에 매핑하여 음악을 재구성합니다. 
@@ -46,6 +47,8 @@ Phase 1에서 생성한 사운드 소스들을 각각 drum, guitar, bass, keyboa
 ![Image](https://github.com/user-attachments/assets/38f6ba3d-fac2-4693-9814-47af45b17d60)
 ![Image](https://github.com/user-attachments/assets/9d8d52ff-cd6d-4253-88d8-985b4c3f25cf)
 ![Image](https://github.com/user-attachments/assets/ff81a6e0-0cf3-4086-ad88-1cb71af84163)
+
+----------------
 ## Limiation & Future Work
 ![Image](https://github.com/user-attachments/assets/ac1a3137-b933-4eb7-8cdb-35dc306283b4)
 ![Image](https://github.com/user-attachments/assets/ab8cc8fe-4e77-4c6a-b270-c16a1072ce76)
