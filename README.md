@@ -4,8 +4,8 @@
 -----------
 ## Pipeline
 파이프라인은 크게 2단계로 구성됩니다. 
-Phase 1: image-to-audio은 이미지로부터 sound_source를 생성합니다.
-Phase 2: audio-to-music은 생성된 sound_source를 튜닝하여 음악으로 발전시킵니다. 
+Phase 1: image-to-sound은 이미지로부터 sound_source를 생성합니다.
+Phase 2: sound-to-music은 생성된 sound_source를 튜닝하여 음악으로 발전시킵니다. 
 ![Image](https://github.com/user-attachments/assets/96b6e40b-bab0-4838-981e-9cf323d4caf7)
 
 ![Image](https://github.com/user-attachments/assets/254c5578-5363-42a3-a687-d3ef8bd383c1)
