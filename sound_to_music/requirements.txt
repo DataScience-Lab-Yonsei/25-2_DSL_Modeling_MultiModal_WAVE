@@ -1,0 +1,28 @@
+# -------- PyTorch (CUDA 11.7) 인덱스 --------
+--extra-index-url https://download.pytorch.org/whl/cu117
+
+# -------- Core --------
+numpy>=1.23,<2.0
+scipy>=1.10
+soundfile>=0.12
+audioread>=3.0
+tqdm>=4.66
+pandas>=2.0
+
+# (선택) librosa: 설치하면 로컬 librosa.py 대신 공식 버전 사용 권장
+librosa>=0.10,<0.11
+soxr>=0.3.5
+
+# -------- MIDI --------
+pretty_midi>=0.2.10
+mido>=1.3.0
+
+# -------- RAVE Inference (CUDA 11.7) --------
+torch==1.13.1+cu117
+torchaudio==0.13.1+cu117
+
+# -------- Optional (품질/편의) --------
+# 고품질 피치/타임스트레치 (시스템 rubberband 필요)
+pyrubberband>=0.4.0
+# 피치추정 고품질(없어도 동작)
+# torchcrepe>=0.0.23
