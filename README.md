@@ -32,16 +32,16 @@ Image
 ↓ 
 
 Phase 1: Image-to-Sound \
-Scene and mood understanding \ 
-Sound source design in text form \
-Realistic sound effect generation \
+Scene and mood understanding 
+Sound source design in text form 
+Realistic sound effect generation 
 
 ↓
 
 Phase 2: Sound-to-Music \
-Timbre transfer via generative audio models \ 
-Instrument-specific SoundFont generation \
-MIDI-based music rendering \
+Timbre transfer via generative audio models 
+Instrument-specific SoundFont generation 
+MIDI-based music rendering 
 
 ↓
 
