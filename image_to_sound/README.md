@@ -1,97 +1,71 @@
-Image-to-Sound Generation Pipeline
-====================================
+# Phase 1: Image-to-Sound Pipeline
 
-Generate sound effects directly from images. This repository provides an end-to-end pipeline that detects sound sources in a scene image using a Vision-Language Model (VLM) and synthesizes corresponding audio with AudioLDM2.
+This phase converts a single image into **realistic sound effects** that could plausibly occur in the scene.
+The output of this phase serves as the input to Phase 2 (Sound-to-Music).
 
-Features
---------
-- Extracts sound source descriptions from images via VLM (Qwen2-VL)
-- Converts VLM outputs to audio-friendly prompts
-- Generates realistic audio clips using AudioLDM2
-- Batch processing and single-image modes
-- Simple, script-first workflow with minimal setup
+Phase 1 focuses on **semantic alignment** between visual content and generated audio by carefully designing the textual intermediate representation.
 
-Repository Structure
---------------------
-- main.py: Orchestrates the full pipeline
-- image_to_text.py: Runs the VLM to extract sound sources from images
-- vlm_qwen.py: Loads and runs the Qwen2-VL model
-- audio_prompt.py: Converts VLM outputs into prompts suitable for AudioLDM2
-- audioldm2.py: Audio generation with AudioLDM2
-- vlm_prompt/extract_sources.py: Prompt templates and example data loader
-- data/: Input images
-- vlm_prompt/: VLM prompt assets and examples
-- sound_sources/: Saved VLM outputs (JSON)
-- result/: Generated audio files
+---
 
-Requirements
-------------
+## 1. Pipeline Overview
+Image  
+↓  
+Vision-Language Model (Qwen2.5-VL)  
+↓  
+Structured sound source description (text)  
+↓  
+prompt engineering   
+↓  
+AudioLDM2  
+↓  
+Sound effects (wav)  
+
+---
+
+## 2. Environment Setup
+
+### Requirements
 - Python 3.8+
-- NVIDIA GPU with CUDA (recommended)
-- At least 8GB RAM (16GB+ recommended)
+- CUDA-enabled GPU (recommended)
+- Hugging Face access token (for model download)
 
-Installation
-------------
-```bash
+Install dependencies:
+```
+bash
 pip install -r requirements.txt
 ```
 
-Quick Start
------------
-- Run the entire pipeline on defaults:
-```bash
-python main.py
+Set Hugging Face token: 
 ```
-
-- Process a single image:
-```bash
-python main.py --single data/101.jpg
-```
-
-- Run only the VLM stage (no audio generation):
-```bash
-python main.py --skip_audio
-```
-
-- Run only the audio generation stage (skip VLM):
-```bash
-python main.py --skip_vlm
-```
-
-Batch Processing
-----------------
-Process all images under `data/` and save extracted sources to `sound_sources/`:
-```bash
-python image_to_text.py
-```
-
-Generate audio from prepared prompts:
-```bash
-python audioldm2.py
-```
-
-Configuration
--------------
-Some models may require an access token. If so, set your environment variable:
-```bash
 export HUGGING_FACE_TOKEN=your_token_here
 ```
-On Windows PowerShell:
-```powershell
-$env:HUGGING_FACE_TOKEN="your_token_here"
+
+---
+
+## 3.Directory Structure
+image_to_sound/
+├─ main.py                # Entry point for full pipeline  
+├─ image_to_text.py       # VLM inference  
+├─ vlm_qwen.py            # Qwen2.5-VL wrapper  
+├─ audio_prompt.py        # Audio-oriented prompt construction  
+├─ audioldm2.py           # Audio generation  
+├─ data/                  # Input images  
+├─ sound_sources/         # Extracted sound source descriptions (JSON)  
+├─ result/                # Generated sound effects (wav)  
+└─ vlm_prompt/            # Prompt templates  
+
+---
+
+## 4. Running the Pipeline
+### 4.1 Run Full Pipeline (Image → Sound)
+Processes all images in data/:
 ```
+python main.py
+```
+Outputs:
+* structured sound descriptions → sound_sources/
+* generated audio files → result/
 
-Tips & Troubleshooting
-----------------------
-- First run can be slow due to model downloads.
-- If you encounter GPU OOM, reduce audio duration or batch size.
-- Ensure your CUDA driver is compatible with your installed `torch` version.
+---
 
-Acknowledgements
-----------------
-- VLM: Qwen2-VL
-- Audio generation: AudioLDM2
 
-License
--------
-This is a research project. Please check and comply with the licenses of the respective upstream models and libraries (Transformers, Diffusers, Qwen-VL, AudioLDM2, etc.).
