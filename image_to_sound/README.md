@@ -66,6 +66,36 @@ Outputs:
 * structured sound descriptions → sound_sources/
 * generated audio files → result/
 
+### 4.2 Process a Single Image
+```
+python main.py --single data/example.jpg
+```
+
+### 4.3 Run Only Image-to-Text (VLM)
+Useful for inspecting or debugging sound source extraction:
+```
+python main.py --skip_audio
+```
+Result:
+```
+only JSON sound descriptions are generated
+```
+### 4.4 Run Only Audio Generation
+If sound source descriptions already exist:
+```
+python main.py --skip_vlm
+```
+
 ---
 
+## 5. Output Format
+Sound Source (JSON)
+Each image is converted into a structured representation including:
+* scene description
+* mood description
+* sound-producing objects
+* material, action, and timbre attributes
 
+Audio Output
+* Non-musical, realistic sound effects
+* Designed to be reused as musical material in Phase 2
