@@ -206,10 +206,10 @@ Audio demos and generated results are provided in the repository.
 ---
 
 ## 7. Repository Structure
-├─ image_to_sound/ # Phase 1: Image-to-Sound pipeline
-├─ sound_to_music/ # Phase 2: Sound-to-Music pipeline
-├─ Report/ # Project report and documentation
-├─ README.md # This file
+├─ image_to_sound/ # Phase 1: Image-to-Sound pipeline  
+├─ sound_to_music/ # Phase 2: Sound-to-Music pipeline  
+├─ Report/ # Project report and documentation  
+├─ README.md # This file  
 
 ---
 
