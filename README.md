@@ -54,8 +54,6 @@ Instead, it is a **two-phase modular pipeline** in which intermediate representa
 The goal of Phase 1 is to generate **realistic sound effects** that could plausibly occur in the given image scene.  
 The target output is **not music**, but sound effects or ambience that can later serve as musical material.
 
----
-
 ### 3.2 Design Principle: Backward Design
 
 A key design principle of Phase 1 is **backward design**.
@@ -68,8 +66,6 @@ Instead of starting from image understanding and hoping that the resulting text 
 Only after answering these questions do we design the expected output format of the VLM.  
 This approach ensures that the intermediate textual representation is **audio-oriented**, not merely descriptive.
 
----
-
 ### 3.3 Text-to-Audio Model Selection
 
 We evaluated multiple text-to-audio generation models, including Make-an-Audio and AudioLDM2, under identical prompt conditions.
@@ -79,8 +75,6 @@ Empirical comparison showed that:
 - AudioLDM2 preserved scene-level ambience more reliably and generated cleaner, more realistic audio.
 
 Based on these observations, **AudioLDM2** was selected as the sound generation model for Phase 1.
-
----
 
 ### 3.4 Prompt Engineering for AudioLDM2
 
@@ -94,8 +88,6 @@ We further conducted ablation studies by removing individual prompt components, 
 - mood and scene constraints strongly influence timbral quality,
 - explicit non-musical constraints are necessary to prevent unintended music generation,
 - instrument mapping information significantly affects tonal characteristics.
-
----
 
 ### 3.5 Image-to-Text (VLM) Selection
 
@@ -117,8 +109,6 @@ For 22 images, we manually constructed a Golden Dataset consisting of:
 Human evaluation focused on hallucination, consistency, and usability as audio prompts.  
 **Qwen2.5-VL-7B** consistently outperformed LLaVA across all criteria and was selected as the final VLM.
 
----
-
 ### 3.6 Phase 1 Output
 
 The output of Phase 1 consists of:
@@ -135,8 +125,6 @@ These outputs serve as the direct input to Phase 2.
 
 Phase 2 transforms sound effects into **musical components** by converting environmental sounds into instrument timbres and rendering them as a musical composition.
 
----
-
 ### 4.2 Pipeline Overview
 Sound effect    
 ↓  
@@ -147,8 +135,6 @@ Instrument-specific SoundFont
 MIDI score rendering (PrettyMIDI)  
 ↓  
 Music  
-
----
 
 ### 4.3 Timbre Transfer with RAVE
 
@@ -161,8 +147,6 @@ RAVE models were trained on subsets of the NSynth dataset corresponding to:
 
 Each model learns a latent representation via standard VAE training, followed by adversarial fine-tuning to improve audio quality.
 
----
-
 ### 4.4 SoundFont Generation
 
 To enable MIDI-based music rendering, instrument-specific SoundFonts are generated from the converted audio:
@@ -171,8 +155,6 @@ To enable MIDI-based music rendering, instrument-specific SoundFonts are generat
 - drum sounds are handled via direct key mapping rather than timbre transfer.
 
 This process allows a single sound source to cover a full pitch range.
-
----
 
 ### 4.5 MIDI Rendering
 
