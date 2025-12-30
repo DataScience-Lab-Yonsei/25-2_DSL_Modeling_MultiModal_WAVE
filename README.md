@@ -28,18 +28,18 @@ To address this challenge, WAVE frames the problem as a **pipeline design task**
 WAVE is composed of two sequential phases, each responsible for a distinct transformation.
 
 Image 
-↓ 
-Phase 1: Image-to-Sound 
-Scene and mood understanding 
-Sound source design in text form 
-Realistic sound effect generation 
-↓
-Phase 2: Sound-to-Music 
-Timbre transfer via generative audio models 
-Instrument-specific SoundFont generation 
-MIDI-based music rendering 
-↓
-Music
+↓    
+Phase 1: Image-to-Sound    
+Scene and mood understanding   
+Sound source design in text form   
+Realistic sound effect generation  
+↓   
+Phase 2: Sound-to-Music   
+Timbre transfer via generative audio models    
+Instrument-specific SoundFont generation    
+MIDI-based music rendering    
+↓   
+Music   
 
 
 WAVE is **not** a fully automated end-to-end music generation system.  
