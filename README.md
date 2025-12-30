@@ -27,7 +27,7 @@ To address this challenge, WAVE frames the problem as a **pipeline design task**
 
 WAVE is composed of two sequential phases, each responsible for a distinct transformation.
 
-Image 
+Image \
 ↓
 
 Phase 1: Image-to-Sound
