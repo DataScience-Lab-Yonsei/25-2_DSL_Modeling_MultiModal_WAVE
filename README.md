@@ -138,15 +138,15 @@ Phase 2 transforms sound effects into **musical components** by converting envir
 ---
 
 ### 4.2 Pipeline Overview
-Sound effect 
-↓
-RAVE (timbre transfer)
-↓
-Instrument-specific SoundFont
-↓
-MIDI score rendering (PrettyMIDI)
-↓
-Music
+Sound effect    
+↓  
+RAVE (timbre transfer)  
+↓  
+Instrument-specific SoundFont  
+↓  
+MIDI score rendering (PrettyMIDI)  
+↓  
+Music  
 
 ---
 
