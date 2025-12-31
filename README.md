@@ -165,10 +165,17 @@ Existing MIDI compositions are replayed using image-derived instrument timbres, 
 
 ## 5. Results
 
-Phase 1 successfully generates scene-consistent sound effects with reduced hallucination and improved realism.  
-Phase 2 demonstrates that environmental sounds can be meaningfully transformed into musical timbres and integrated into multi-instrument compositions.
+Phase 1 successfully generates scene-consistent sound effects with reduced hallucination and improved realism.   
+It can be checked at the following link:  
+https://github.com/DataScience-Lab-Yonsei/25-2_DSL_Modeling_MultiModal_WAVE/tree/main/sound_to_music/sound_input
 
-Audio demos and generated results are provided in the repository.
+Phase 2 demonstrates that environmental sounds can be meaningfully transformed into musical timbres and integrated into multi-instrument compositions.  
+It can be checked at the following link:  
+https://github.com/DataScience-Lab-Yonsei/25-2_DSL_Modeling_MultiModal_WAVE/tree/main/sound_to_music/sfz_output
+
+Audio demos and generated results are provided in the repository.  
+It can be checked at the following link:  
+https://github.com/DataScience-Lab-Yonsei/25-2_DSL_Modeling_MultiModal_WAVE/tree/main/sound_to_music/result
 
 ---
 
