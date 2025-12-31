@@ -1,0 +1,4 @@
+<group>
+<region> sample=03_birds_chirping_chirp_piano_rave.wav pitch_keycenter=60 lokey=0 hikey=127
+loop_start=12000
+loop_end=167872
